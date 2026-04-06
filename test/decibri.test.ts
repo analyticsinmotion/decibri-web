@@ -39,15 +39,17 @@ const mockCreateMediaStreamSource = vi.fn().mockReturnValue(mockSourceNode);
 
 let capturedWorkletOptions: any = null;
 
-const MockAudioContext = vi.fn().mockImplementation(() => ({
-  sampleRate: 48000,
-  resume: mockContextResume,
-  close: mockContextClose,
-  createMediaStreamSource: mockCreateMediaStreamSource,
-  audioWorklet: { addModule: mockAddModule },
-}));
+const MockAudioContext = vi.fn().mockImplementation(function () {
+  return {
+    sampleRate: 48000,
+    resume: mockContextResume,
+    close: mockContextClose,
+    createMediaStreamSource: mockCreateMediaStreamSource,
+    audioWorklet: { addModule: mockAddModule },
+  };
+});
 
-const MockAudioWorkletNode = vi.fn().mockImplementation((_ctx: any, _name: string, options: any) => {
+const MockAudioWorkletNode = vi.fn().mockImplementation(function (_ctx: any, _name: string, options: any) {
   capturedWorkletOptions = options;
   return mockWorkletNode;
 });
