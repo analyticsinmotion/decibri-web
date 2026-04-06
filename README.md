@@ -3,9 +3,9 @@
 
 # decibri-web
 
-Cross-browser microphone capture for the web. Same API as [decibri](https://decibri.dev) for Node.js.
+Cross-browser microphone capture for the web.
 
-Zero dependencies. Pure TypeScript. Under 10KB.
+Zero dependencies.
 
 <!-- badges: start -->
 <table>
