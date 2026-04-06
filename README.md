@@ -29,7 +29,7 @@ Zero dependencies.
 | Package | Environment | Backend |
 | --------- | ------------ | --------- |
 | [decibri](https://npmjs.com/package/decibri) | Node.js | Native C++ (PortAudio) |
-| **decibri-web** | **Browser** | **Web Audio API** |
+| **[decibri-web](https://www.npmjs.com/package/decibri-web)** | **Browser** | **Web Audio API** |
 
 Same API. Different runtimes. Capture audio anywhere JavaScript runs.
 
