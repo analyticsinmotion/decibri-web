@@ -1,0 +1,40 @@
+{
+  "name": "decibri-web",
+  "version": "0.1.0",
+  "description": "Cross-browser microphone capture for the web. Same API as decibri for Node.js.",
+  "main": "dist/decibri-web.umd.js",
+  "module": "dist/decibri-web.esm.js",
+  "types": "dist/decibri-web.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/decibri-web.esm.js",
+      "require": "./dist/decibri-web.umd.js",
+      "types": "./dist/decibri-web.d.ts"
+    },
+    "./worklet": "./dist/worklet.js"
+  },
+  "files": [
+    "dist/"
+  ],
+  "keywords": [
+    "microphone",
+    "audio",
+    "capture",
+    "web-audio",
+    "browser",
+    "recording",
+    "pcm",
+    "speech",
+    "voice",
+    "decibri",
+    "stt",
+    "speech-to-text"
+  ],
+  "author": "Analytics in Motion",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/analyticsinmotion/decibri-web"
+  },
+  "homepage": "https://decibri.dev"
+}
