@@ -1,6 +1,6 @@
 {
   "name": "decibri-web",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Cross-browser microphone capture for the web. Same API as decibri for Node.js.",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
