@@ -91,8 +91,10 @@ class DecibriProcessor extends AudioWorkletProcessor {
       pos += this.ratio;
     }
 
-    // Carry fractional remainder relative to consumed input
-    this.position = pos - inputLength;
+    // Carry fractional remainder relative to consumed input.
+    // Clamp to >= 0: position can go slightly negative when pos lands
+    // near inputLength - 1, which would cause input[-1] = undefined = NaN.
+    this.position = Math.max(0, pos - inputLength);
 
     return output;
   }
