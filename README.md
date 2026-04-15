@@ -15,7 +15,6 @@ Zero dependencies.
       <a href="https://www.npmjs.com/package/decibri-web"><img src="https://img.shields.io/npm/v/decibri-web" alt="npm version"></a>&nbsp;
       <a href="https://github.com/analyticsinmotion/decibri-web/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-Apache_2.0-blue.svg" alt="Apache 2.0 License"></a>&nbsp;
       <a href="https://decibri.com"><img src="https://img.shields.io/badge/Website-decibri.com-blue" alt="decibri.com"></a>&nbsp;
-      <a href="https://github.com/analyticsinmotion"><img src="https://github.com/user-attachments/assets/616c530f-cf2a-4f26-8f6c-7397be513847" alt="Analytics in Motion" width="137" height="20"></a>
     </td>
   </tr>
 </table>
@@ -24,12 +23,20 @@ Zero dependencies.
 
 ---
 
+**PLEASE NOTE:**
+
+Browser microphone capture is now built into the main [`decibri`](https://www.npmjs.com/package/decibri) package via conditional exports. The same code works in both Node.js and the browser from a single install.
+
+- **New projects:** use [`decibri`](https://www.npmjs.com/package/decibri) directly. See the [browser documentation](https://decibri.com/docs/browser/).
+- **Existing `decibri-web` users:** this package remains published at v0.1.1 and continues to function. No new features or active development are planned. Migrate to [`decibri`](https://www.npmjs.com/package/decibri) when convenient.
+
+---
+
 ## The decibri platform
 
 | Package | Environment | Backend |
 | --------- | ------------ | --------- |
-| [decibri](https://npmjs.com/package/decibri) | Node.js | Native C++ (PortAudio) |
-| **[decibri-web](https://www.npmjs.com/package/decibri-web)** | **Browser** | **Web Audio API** |
+| [decibri](https://npmjs.com/package/decibri) | Node.js + Browser | Rust (cpal) + Web Audio API |
 
 Same API. Different runtimes. Capture audio anywhere JavaScript runs.
 
